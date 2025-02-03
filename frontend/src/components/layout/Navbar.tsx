@@ -30,6 +30,7 @@ export default function Navbar() {
                 >
                   Crops
                 </Link>
+                {user.role === 'farmer' && (
                 <Link
                   to="/resources"
                   className={`px-3 py-2 rounded-md text-sm font-medium ${
@@ -40,6 +41,7 @@ export default function Navbar() {
                 >
                   Resources
                 </Link>
+                )}
                 {user.role === 'farmer' && (
                   <Link
                     to="/resources/requests"
